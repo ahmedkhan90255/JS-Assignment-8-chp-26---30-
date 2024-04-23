@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question no.3</title>
+    <style>
+      body {
+        background-color: steelblue;
+        color: crimson;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      document.write(
+        "<h1>  Write a program that displays the absolute value of a Number </h1>"
+      );
+      var userInput = Number(prompt("Enter Any Negative Number"));
+      var userInput2 = Math.abs(userInput);
+      if (userInput <= -1) {
+        document.write(
+          "<h2>Ans: The Absolute Value Of " +
+            userInput +
+            " is " +
+            userInput2 +
+            "</h2>"
+        );
+      } else {
+        alert("Enter Negative Integer");
+      }
+    </script>
+  </body>
+</html>
