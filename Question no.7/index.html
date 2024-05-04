@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question no.7</title>
+    <style>
+        body {
+            background-color: aquamarine;
+            color: blueviolet;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Write a program that asks the user about his weight. Parse 
+        the user input and display his weight in your browser. <br> 
+        Possible user inputs can be: <br>
+        a. 50 <br>
+        b. 50kgs <br>
+        c. 50.2kgs <br>
+        d. 50.2kilograms</h1> <br>
+    <script>
+        
+
+        function parseWeight(inputString) {
+            // Remove any non-numeric characters from the input string
+            var cleanedInput = inputString.replace(/[^\d.]/g, '');
+            // Convert the cleaned input to a float
+            var weightKgs = parseFloat(cleanedInput);
+            return weightKgs;
+        }
+
+        function displayWeight() {
+            var userInput = document.getElementById("weightInput").value;
+            try {
+                var weightKgs = parseWeight(userInput);
+                document.getElementById("result").innerHTML = "Your weight is " + weightKgs + " kilograms.";
+            } catch (error) {
+                document.getElementById("result").innerHTML = "Invalid input. Please enter a valid weight.";
+            }
+        }
+    </script>
+
+    <h2>Weight Parser</h2>
+    <input type="text" id="weightInput" placeholder="Enter your weight">
+    <button onclick="displayWeight()">Submit</button>
+    <p id="result"></p>
+    </script>
+</body>
+</html>
